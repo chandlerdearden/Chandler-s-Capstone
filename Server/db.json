@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Chicken and rice",
+        "ingredients": "Chicken, Rice, salt, butter",
+        "calories": 500,
+        "image": "asdf1"
+    },
+    {
+        "id": 2,
+        "name": "Steak and Fried",
+        "ingredients": "Steak, Potatoes, salt, butter",
+        "calories": 600,
+        "image": "asdf2"
+    }
+]
