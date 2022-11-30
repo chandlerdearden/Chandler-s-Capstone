@@ -1,4 +1,6 @@
 const mealContainer = document.querySelector('#mealsContainer')
+const mealSelect = document.querySelector('#meal-selector')
+
 
 
 const baseURL = "http://localhost:4056/api/meals"
@@ -29,7 +31,19 @@ function createMealCard(meal) {
 
     mealContainer.appendChild(mealCard)
 }
+function getMealOptions () {
+    axios.get(baseURL).then(res =>{
+        const meals = res.data
+        for(i=0; i <meals.length; i++) {
+            let option = document.createElement('option')
+            option.value = meals[i].name
+            option.textContent = meals[i].name
+            mealSelect.appendChild(option)
+        }
+    } )
+}
 
+getMealOptions()
 getAllMeals()
 
 
