@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Meal Prep</h1>
+        <a href="./home.html">Home</a>
+        <a href="./list.html">Shopping List</a>
+        <a href="./meals.html">Add/Edit a Meal</a>
+
+    </header>
+    <main>
+        <section id="addMeal">
+            <h3>Add Your Own Meal</h3>
+            <input type="text" placeholder="Meal name">
+            <input type="text" placeholder="Ingredients">
+            <input type="text" placeholder="Image URL">
+            <input type="number" placeholder="Calories">
+            <button id ="addMealBtn">Add Meal</button>
+
+
+
+        </section>
+        <br>
+        <br>
+        <section id="editMeal">
+            <label for = "mealSelector">Choose a Meal:</label>
+            <select name="Select Meal" id="meal-selector">
+                <option value="">--Please choose an option--</option>
+            </select>
+
+        </section>
+        
+
+
+
+    </main>
+
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./meals.js"></script>
+</body>
+</html>
