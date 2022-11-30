@@ -1,10 +1,13 @@
 const mealSelect = document.querySelector('#meal-selector')
 const addMealBtn = document.querySelector("#addMealBtn")
+const editBtn = document.querySelector("#editBtn")
+const editMealSection = document.querySelector("#editMeal")
 
 const baseURL = "http://localhost:4056/api/meals"
 
 
 const createMeal = body => axios.post(baseURL, body).then(getMealOptions)
+const updateMeal = (id, body) => axios.put(`${baseURL}/${id}`, body).then(getMealOptions)
 
 
 function getMealOptions () {
@@ -40,9 +43,25 @@ function createMealHandler () {
 
     mealSelect.innerHTML = `<option selected disabled>--Please choose a Meal--</option>`
 }
+function editMeal () {
+    let mealName = mealSelect.value
+    console.log("the button is working")
+    axios.get(baseURL).then(res => {
+        let meals = res.data
+        let id = meals.findIndex(meal => meal.name === mealName)
+        let editor = document.createElement('div')
+        editor.innerHTML = `<input id="editMealName" type="text" placeholder="Meal name">
+        <input id="editMealIngredients" type="text" placeholder="Ingredients">
+        <input id="editMealImage" type="text" placeholder="Image URL">
+        <input id ='editMealCalories' type="number" placeholder="Calories">
+        <button id ="editMealBtn"> Update ${mealName} </button>`
+        editMealSection.appendChild(editor)
+        
+    })
+}
 
 
-
+editBtn.addEventListener('click', editMeal)
 addMealBtn.addEventListener('click', createMealHandler)
 
 getMealOptions()
