@@ -68,6 +68,7 @@ function editMeal () {
 
         editMealBtn.addEventListener("click", sendUpdatedMeal)
         editMealBtn.addEventListener("click", () => editMealSection.removeChild(editor))
+        editBtn.classList.add("hidden")
 
     })
    
@@ -93,7 +94,7 @@ function sendUpdatedMeal () {
         
 
 
-
+        editBtn.classList.remove("hidden")
 }
 
 editBtn.addEventListener('click', editMeal)

@@ -36,13 +36,14 @@ function createMealCard(meal) {
     <h3>${meal.name}</h3>
     <p>${meal.ingredients}</p>
     <p>${meal.calories} Calories</p>
-    <button onclick="deleteMeal(${meal.id})">delete</button>
+    <button onclick="deleteMeal(${meal.id}); window.location.reload()">delete</button>
     `
 
 
     mealContainer.appendChild(mealCard)
 }
 function getMealOptions () {
+    mealSelectMain.innerHTML = `<option selected disabled>--Please choose a Meal--</option>`
     axios.get(baseURL).then(res =>{
         const meals = res.data
         for(i=0; i <meals.length; i++) {
@@ -91,6 +92,7 @@ function addMealToSchedule () {
         } else (
             alert('choose a day')
         )
+        
     })
     
     
