@@ -45,19 +45,30 @@ function createMealHandler () {
 }
 function editMeal () {
     let mealName = mealSelect.value
-    console.log("the button is working")
     axios.get(baseURL).then(res => {
         let meals = res.data
-        let id = meals.findIndex(meal => meal.name === mealName)
+        let index= meals.findIndex(meal => meal.name === mealName)
         let editor = document.createElement('div')
-        editor.innerHTML = `<input id="editMealName" type="text" placeholder="Meal name">
-        <input id="editMealIngredients" type="text" placeholder="Ingredients">
-        <input id="editMealImage" type="text" placeholder="Image URL">
-        <input id ='editMealCalories' type="number" placeholder="Calories">
+        editor.innerHTML = `
+        <label for ="editmealName">Name:</label>
+        <input id="editMealName" type="text" value= '${meals[index].name}'><br>
+
+        <label for ="editmealImage">ImageURL:</label>
+        <input id="editMealImage" type="text" value="${meals[index].image}"><br>
+
+        <label for ="editmealCalories">Calories:</label>
+        <input id ='editMealCalories' type="number" value="${meals[index].calories}"><br>
+
+        <label for ="editMealIngredients">Ingredients:</label>
+        <input id="editMealIngredients" size = 50 type="text" value="${meals[index].ingredients}"><br>
+
         <button id ="editMealBtn"> Update ${mealName} </button>`
         editMealSection.appendChild(editor)
-        
+
+       
+    
     })
+   
 }
 
 
