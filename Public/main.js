@@ -66,7 +66,7 @@ function addMealToSchedule () {
         <img alt='meal image' src=${meals[index].image}/>
         <p>${meals[index].name}</p>
         <p>${meals[index].calories}</p>
-        <button onclick = "" >Remove</button>
+        <button class = "removeMeal" onclick = "deleteFromSchedule()" >Remove</button>
         `
         if(day === "sunday"){
             sunday.appendChild(addedMeal)
@@ -91,14 +91,13 @@ function addMealToSchedule () {
         } else (
             alert('choose a day')
         )
-
-
-
     })
-
-
+    
+    
 }
 function deleteFromSchedule () {
+    const removeMealBtn = document.querySelector(".removeMeal")
+      removeMealBtn.parentElement.remove()
 
 }
 
