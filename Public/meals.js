@@ -7,8 +7,6 @@ const baseURL = "http://localhost:4056/api/meals"
 
 
 const createMeal = body => axios.post(baseURL, body).then(getMealOptions)
-const updateMeal = (id, body) => axios.put(`${baseURL}/${id}`, body).then(getMealOptions)
-
 
 function getMealOptions () {
     axios.get(baseURL).then(res =>{
@@ -20,6 +18,7 @@ function getMealOptions () {
             mealSelect.appendChild(option)
         }
     } )
+    
 }
 
 function createMealHandler () {
@@ -50,29 +49,53 @@ function editMeal () {
         let index= meals.findIndex(meal => meal.name === mealName)
         let editor = document.createElement('div')
         editor.innerHTML = `
-        <label for ="editmealName">Name:</label>
+        <p id = "mealId">${meals[index].id}</p>
+        <label for ="editMealName">Name:</label>
         <input id="editMealName" type="text" value= '${meals[index].name}'><br>
 
-        <label for ="editmealImage">ImageURL:</label>
+        <label for ="editMealImage">ImageURL:</label>
         <input id="editMealImage" type="text" value="${meals[index].image}"><br>
 
-        <label for ="editmealCalories">Calories:</label>
+        <label for ="editMealCalories">Calories:</label>
         <input id ='editMealCalories' type="number" value="${meals[index].calories}"><br>
 
         <label for ="editMealIngredients">Ingredients:</label>
         <input id="editMealIngredients" size = 50 type="text" value="${meals[index].ingredients}"><br>
-
-        <button id ="editMealBtn"> Update ${mealName} </button>`
+        <button id ="editMealBtn"> Update</button>
+        `
         editMealSection.appendChild(editor)
+        let editMealBtn = document.querySelector("#editMealBtn")
 
-       
-    
+        editMealBtn.addEventListener("click", sendUpdatedMeal)
+        editMealBtn.addEventListener("click", () => editMealSection.removeChild(editor))
+
     })
    
+    
 }
+function sendUpdatedMeal () {
+        let mealId = document.querySelector('#mealId').textContent
+        let editName = document.querySelector("#editMealName")
+        let editImage = document.querySelector("#editMealImage")
+        let editCalories = document.querySelector("#editMealCalories")
+        let ediIngredients = document.querySelector("#editMealIngredients")
 
+        let body = {
+            name: editName.value,
+            image: editImage.value,
+            calories: editCalories.value,
+            ingredients: ediIngredients.value
+        }
+        alert(`${body.name} was succesfully updated!`)
+        mealSelect.innerHTML = `<option selected disabled>--Please choose a Meal--</option>`
+
+        axios.put(`${baseURL}/${mealId}`, body).then(getMealOptions)
+        
+
+
+
+}
 
 editBtn.addEventListener('click', editMeal)
 addMealBtn.addEventListener('click', createMealHandler)
-
 getMealOptions()

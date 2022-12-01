@@ -31,14 +31,15 @@ module.exports = {
     },
 
     updateNameMeals: function (req,res) {
-        let {name, calories, imageURL, ingredients} = req.body
+        console.log(req.body)
+        let {name, calories, image, ingredients} = req.body
         let {id} = req.params
 
         let index = meals.findIndex(meals => meals.id === +id)
 
         meals[index].name = name
         meals[index].calories = +calories
-        meals[index].image = imageURL
+        meals[index].image = image
         meals[index].ingredients = ingredients
 
         res.status(200).send(meals)
