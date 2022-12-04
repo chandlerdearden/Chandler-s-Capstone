@@ -67,8 +67,6 @@ function addMealToSchedule () {
         let addedMeal = document.createElement('li')
         addedMeal.setAttribute("onclick", "deleteFromSchedule(this)")
         addedMeal.textContent = meals[index].name
-        ingredients.push(meals[index].ingredients)
-        console.log(ingredients)
 
         if(day === "sunday"){
             sunday.appendChild(addedMeal)
@@ -95,10 +93,10 @@ function addMealToSchedule () {
         )
     })
     
-    function deleteFromSchedule (element) {
-        element.remove()
-        
-    }
+    
+}
+function deleteFromSchedule (element) {
+    element.remove()
     
 }
 
