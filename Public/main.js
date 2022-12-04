@@ -1,3 +1,4 @@
+
 const mealContainer = document.querySelector('#mealsContainer')
 const mealSelectMain =document.querySelector('#mealSelectMain')
 const addMealToScheduleBtn = document.querySelector("#addMealToScheduleBtn")
@@ -32,7 +33,7 @@ function displayMeals(arr) {
 function createMealCard(meal) {
     const mealCard = document.createElement('div')
     
-    mealCard.innerHTML = `<img alt='meal image' src=${meal.image}/>
+    mealCard.innerHTML = `<img class ="mealImg" alt='meal image' src=${meal.image}/>
     <h3>${meal.name}</h3>
     <p>${meal.ingredients}</p>
     <p>${meal.calories} Calories</p>
@@ -41,9 +42,10 @@ function createMealCard(meal) {
 
 
     mealContainer.appendChild(mealCard)
+    mealCard.classList.add('mealCard')
 }
 function getMealOptions () {
-    mealSelectMain.innerHTML = `<option selected disabled>--Please choose a Meal--</option>`
+    mealSelectMain.innerHTML = `<option selected disabled>Add Meal</option>`
     axios.get(baseURL).then(res =>{
         const meals = res.data
         for(i=0; i <meals.length; i++) {
@@ -62,13 +64,12 @@ function addMealToSchedule () {
     .then(res => {
          const meals = res.data
         let index = meals.findIndex(meals => meals.name === meal)
-        let addedMeal = document.createElement('div')
-        addedMeal.innerHTML = `
-        <img alt='meal image' src=${meals[index].image}/>
-        <p>${meals[index].name}</p>
-        <p>${meals[index].calories}</p>
-        <button class = "removeMeal" onclick = "deleteFromSchedule()" >Remove</button>
-        `
+        let addedMeal = document.createElement('li')
+        addedMeal.setAttribute("onclick", "deleteFromSchedule(this)")
+        addedMeal.textContent = meals[index].name
+        ingredients.push(meals[index].ingredients)
+        console.log(ingredients)
+
         if(day === "sunday"){
             sunday.appendChild(addedMeal)
         } 
@@ -92,15 +93,13 @@ function addMealToSchedule () {
         } else (
             alert('choose a day')
         )
-        
     })
     
+    function deleteFromSchedule (element) {
+        element.remove()
+        
+    }
     
-}
-function deleteFromSchedule () {
-    const removeMealBtn = document.querySelector(".removeMeal")
-      removeMealBtn.parentElement.remove()
-
 }
 
 addMealToScheduleBtn.addEventListener('click', addMealToSchedule)

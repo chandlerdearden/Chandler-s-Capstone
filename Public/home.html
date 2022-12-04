@@ -10,62 +10,93 @@
 <body>
     <header>
         <h1>Meal Prep</h1>
-        <a href="./home.html">Home</a>
-        <a href="./list.html">Shopping List</a>
-        <a href="./meals.html">Add/Edit a Meal</a>
+        <div id = "links">
+            <a href="./home.html"><img id ="home-page"class ="linkIcon"src="https://img.icons8.com/material-outlined/512/home-page.png"  alt=""></a>
+            <a href="./list.html"><img  id ="list-page"class ="linkIcon" src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/512/external-shopping-list-shopping-and-ecommerce-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png"  alt=""></a>
+            <a href="./meals.html"><img id="add-meal-page"class = "linkIcon" src="https://img.icons8.com/ios/512/plus-2-math.png" alt=""></a>
+        </div>
 
     </header>
     <main>
-        <Section>
+        <Section id = "schedule">
             <h1>Schedule</h1>
-            <p>Add a Meal to Schedule</p>
-            <select id="mealSelectMain">
-                <option selected disabled>--Please choose a Meal--</option>
-            </select>
-            <select id="daySelect">
-                <option selected disabled>--Choose a Day of the Week--</option>
-                <option value="sunday">Sunday</option>
-                <option value="monday">Monday</option>
-                <option value="tuesday">Tuesday</option>
-                <option value="wednesday">Wednesday</option>
-                <option value="thursday">Thursday</option>
-                <option value="friday">Friday</option>
-                <option value="saturday">Saturday</option>
-
-            </select>
-            <button id="addMealToScheduleBtn">Add</button>
-            <div id ="sunday">
-                <h4>Sunday</h4>
+            <div id ="topSchedule">
+                <select id="mealSelectMain">
+                    <option selected disabled>Add Meal</option>
+                </select>
+                <select id="daySelect">
+                    <option selected disabled>To Day</option>
+                    <option value="sunday">Sunday</option>
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                    <option value="saturday">Saturday</option>
+                    
+                </select>
+                
+                <button id="addMealToScheduleBtn">Add</button>
+           
             </div>
-            <div id ="monday">
-                <h4>Monday</h4>
+
+
+            <div id ="week">
+                <div  class = "dayOfWeek">
+                    <div>
+                        <h4 class ="dayCard">Sunday</h4>
+                    </div>
+                    <ul id ="sunday">
+                        
+                    </ul>
+                </div>
+                <div class = "dayOfWeek">
+                    <h4 class ="dayCard">Monday</h4>
+                    <ul class ="mealList"id ="monday">
+                        
+                    </ul>
+                    
+                </div>
+            <div class = "dayOfWeek">
+                <h4 class ="dayCard">Tuesday</h4>
+                <ul class ="mealList"id ="tuesday">
+                        
+                </ul>
                 
             </div>
-            <div id ="tuesday">
-                <h4>Tuesday</h4>
-
-
+            <div class = "dayOfWeek">
+                <h4 class ="dayCard">Wednesday</h4>
+                <ul class ="mealList"id ="wednesday">
+                        
+                </ul>
+                
             </div>
-            <div id ="wednesday">
-                <h4>Wednesday</h4>
-
+            <div class = "dayOfWeek">
+                <h4 class ="dayCard">Thursday</h4>
+                <ul class ="mealList"id ="thursday">
+                        
+                </ul>
+                
+                
             </div>
-            <div id ="thursday">
-                <h4>Thursday</h4>
-
-
+            <div class = "dayOfWeek">
+                <h4 class ="dayCard">Friday</h4>
+                <ul class ="mealList"id ="friday">
+                        
+                </ul>
+                
+                
             </div>
-            <div id ="friday">
-                <h4>Friday</h4>
-
-
+            <div class = "dayOfWeek">
+                <h4 class ="dayCard">Saturday</h4>
+                <ul class ="mealList"id ="saturday">
+                        
+                </ul>
+                
             </div>
-            <div id ="saturday">
-                <h4>Saturday</h4>
-
-            </div>
-
-
+        </div>
+            
+            
         </Section>
         
         

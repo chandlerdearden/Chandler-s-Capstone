@@ -4,13 +4,13 @@
         "name": "Chicken and rice",
         "ingredients": "Chicken, Rice, salt, butter",
         "calories": 500,
-        "image": "asdf1"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiTGC5joHfMJENAAl9NTeAnZCnFjCOf2E50Q&usqp=CAU"
     },
     {
         "id": 2,
         "name": "Steak and Fried",
         "ingredients": "Steak, Potatoes, salt, butter",
         "calories": 600,
-        "image": "asdf2"
+        "image": "https://www.shutterstock.com/image-photo/grilled-steak-french-fries-600w-102931337.jpg"
     }
 ]
