@@ -75,12 +75,14 @@ function addMealToSchedule () {
 
     function displayDays (days){
         for(key in days){
-            console.log(days[key].length)
+            
             for(let i  = 0 ; i < days[key].length; i++){
                 let list = document.createElement('li')
+                list.setAttribute('onclick', "deleteList(this)")
                 list.textContent = (days[key][i])
                 if (key === "sunday"){
                     sunday.appendChild(list)
+
                 }
                 else if (key === "monday"){
                     monday.appendChild(list)
@@ -103,7 +105,14 @@ function addMealToSchedule () {
             }            
         }
     }
-
+    function deleteList(element) {
+         let day = element.parentElement.id
+         let body = {
+            "meal": element.textContent
+         }
+        axios.put(`${baseURL2}/deleteDays/${day}`, body).then(daysCallback)
+        window.location.reload()
+    }
 
    
 addMealToScheduleBtn.addEventListener('click', addMealToSchedule)
