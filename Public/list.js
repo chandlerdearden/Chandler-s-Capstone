@@ -1,13 +1,26 @@
+ let mealNames = document.querySelector("#meals-selected")
+ let mealNamesSet = JSON.parse(localStorage.getItem("shoppingList"))
+ const ingredientsNeeded = document.querySelector("#ingredients")
+ const baseURL = "http://localhost:4056/api/meals"
+ console.log(mealNamesSet)
  
- let unorderedlist = document.querySelector('#list')
- unorderedlist.innerHTML = ``
 
- function addIngredients () {
-    console.log(ingredients)
-    for(let i = 0; i < ingredients.length; i++){
-        let list = document.createElement('li')
-        list.textContent = ingredients[i]
-        unorderedlist.appendChild(list)
-    }
- }
-addIngredients()
+ for( let i = 0; i < mealNamesSet.length; i++) {
+    axios.get(baseURL)
+    .then(res => {
+        console.log(mealNamesSet[i])
+         const meals = res.data
+
+        let index = meals.findIndex(meals => meals.ingredients === mealNamesSet[i])
+
+        let list = document.createElement('p')
+        let mealIngredients = document.createElement('li')
+
+        mealIngredients.textContent = meals[index].ingredients
+        list.textContent = meals[index].name
+
+
+        ingredientsNeeded.appendChild(mealIngredients)
+        mealNames.appendChild(list)     
+    })
+}
