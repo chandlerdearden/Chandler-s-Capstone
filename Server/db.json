@@ -12,5 +12,32 @@
         "ingredients": "Steak, Potatoes, salt, butter",
         "calories": 600,
         "image": "https://www.shutterstock.com/image-photo/grilled-steak-french-fries-600w-102931337.jpg"
-    }
-]
+    },
+    {
+        "id": 3,
+        "name": "Eggs and Bacon",
+        "ingredients": "Eggs, Milk, Bacon",
+        "calories": 250,
+        "image": "https://st.depositphotos.com/1000589/4905/i/950/depositphotos_49050299-stock-photo-scrambled-eggs-and-bacon.jpg"
+    },
+    {
+        "id": 4,
+        "name": "French Toast",
+        "ingredients": "Bread, Milk, Eggs, Cinnamon, Maple Syrup",
+        "calories": 800,
+        "image": "https://images.unsplash.com/photo-1595044643502-616eeebbdff3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+    },
+    {
+        "id": 5,
+        "name": "Ham and Turkey Sub",
+        "ingredients": "Bread, Ham, Turkey, Cheese, Mayo, lettuce, Tomato",
+        "calories": 500,
+        "image": "https://images.albertsons-media.com/is/image/ABS/970123554?$ng-ecom-pdp-desktop$&defaultImage=Not_Available"
+    },
+    {
+        "id": 6,
+        "name": "Chicken Alfredo",
+        "ingredients": "Chicken, Fettuccine, Alfredo Sauce",
+        "calories": 650,
+        "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+}]

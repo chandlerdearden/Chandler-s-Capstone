@@ -1,5 +1,5 @@
 let mealsSelected = document.querySelector("#meals-selected")
-let ingredientsList = document.querySelector('#ingredients-list')
+let ingredientsList = document.querySelector('#list')
 
 
 const baseURL2 = 'http://localhost:4056/api'
@@ -19,7 +19,7 @@ function displayList (days) {
         }
         let mealNames = new Set(array)
         for(value of mealNames){
-            let name = document.createElement('li')
+            let name = document.createElement('p')
             name.textContent = value
             mealsSelected.appendChild(name)
 
@@ -33,7 +33,6 @@ function displayList (days) {
                 let list = document.createElement('li')
                 list.textContent = ingredients
                 ingredientsList.appendChild(list)
-
             }
         })
 }

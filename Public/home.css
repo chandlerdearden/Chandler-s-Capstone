@@ -31,25 +31,27 @@ main {
 }
 #topSchedule {
     display: flex;
-    margin-left: 2vw;
+    margin-left: 1.5vw;
     margin-top: 5vh;
     margin-bottom: 2vh;
 }
 #mealSelectMain {
-    margin-right: 1vw;
+    margin-right: 1.5vw;
 }
 #daySelect{
-    margin-right: 1vw;;
+    margin-right: 1.5vw;;
 }
 #mealsContainer {
     display: flex;
-    height: 15vh;
     flex-wrap: wrap;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
 }
 #week {
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin-left:
 }
 .dayOfWeek {
     border:  1px transparent;
@@ -82,6 +84,7 @@ ul {
 li:hover {
     transform: scale(1.1);
     text-decoration: line-through;
+    cursor: pointer;
 }
 .mealCard {
     display: flex;
@@ -93,7 +96,7 @@ li:hover {
     max-height: 15vh;
     min-width: 30vw;
     font-size: 18px;
-    margin: .5vw;
+    margin: 1vw;
     background-color: #cdcdcd;
 }
 .mealImg {
@@ -112,13 +115,13 @@ li:hover {
     visibility: hidden;
 }
 #home-page:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 #list-page:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 #add-meal-page:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 button {
     
@@ -143,6 +146,9 @@ button:hover{
     color: #9ccdff;
     background-color: #fff;
 }
+button:active{
+    transform: scale(1.1);
+}
 select {
     height: 48px;
     /* box-shadow: 0 0 0 2px #616467; */
@@ -160,11 +166,11 @@ select:hover{
     background-color: #fff;
 }
 h1 {
-    margin-left: 1vw;
+    margin-left: 1.5vw;
     letter-spacing: 7px;
     text-transform: uppercase;
 }
 #savedMeals {
     border-top: 1px solid black;
-    margin-top: 15vh;
+    margin-top: 10vh;
 }

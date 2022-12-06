@@ -19,7 +19,9 @@ module.exports = {
         let {day} = req.params
         let {meal} =req.body
         
-        days[day].splice(meal, 1)
+        let index = days[day].findIndex(value => value === meal)
+        
+        days[day].splice(index, 1)
         
         res.status(200).send(days)
     }
