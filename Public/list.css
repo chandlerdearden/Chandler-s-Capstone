@@ -1,0 +1,79 @@
+    body {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-family: Heebo;
+        background-color: white;
+        color: black;
+    }
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 0vh 20vw 0vh 20vw;
+    border: dotted black;
+}
+header {
+    display: flex;
+    align-items: center;
+    border-bottom:solid 1px black;
+    position: sticky;
+    top: 0px;
+    color: black;
+    background-color: #cdcdcd;
+}
+#mealPrep {
+    margin-left: 1vw;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+#links {
+    display: flex;
+    margin-left: 60vw;
+}
+.hidden {
+    visibility: hidden;
+}
+.linkIcon {
+    height: 5vh;
+    margin: 1vw;
+}
+#home-page:hover {
+    transform: scale(1.2);
+}
+#list-page:hover {
+    transform: scale(1.2);
+}
+#add-meal-page:hover {
+    transform: scale(1.2);
+}
+button {
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 1;
+    background-color: #9ccdff;
+    border: 1px solid ;
+    min-width: 100px;
+    text-transform: uppercase;
+    white-space: normal;
+    text-align: center;
+    padding: 14px 14px 14px;
+    color: black;
+    /* box-shadow: 0 0 0 2px #616467; */
+    height: 48px;
+    
+}
+button:hover{
+    color: #9ccdff;
+    background-color: #fff;
+}
+#print {
+    position: absolute;
+    bottom: 100px;
+    right: 45vw;
+    left: 45vw;
+}

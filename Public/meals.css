@@ -1,0 +1,115 @@
+body {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-family: Heebo;
+        background-color: white;
+        color: black;
+    }
+ h1 {
+        margin-left: 1vw;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+    }
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 25px;
+
+}
+header {
+    display: flex;
+    align-items: center;
+    border-bottom:solid 1px black;
+    position: sticky;
+    top: 0px;
+    color: black;
+    background-color: #cdcdcd;
+}
+#links {
+    display: flex;
+    margin-left: 60vw;
+}
+.hidden {
+    visibility: hidden;
+}
+.linkIcon {
+    height: 5vh;
+    margin: 1vw;
+}
+#home-page:hover {
+    transform: scale(1.2);
+}
+#list-page:hover {
+    transform: scale(1.2);
+}
+#add-meal-page:hover {
+    transform: scale(1.2);
+}
+button {
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 1;
+    background-color: #9ccdff;
+    border: 1px solid ;
+    min-width: 100px;
+    text-transform: uppercase;
+    white-space: normal;
+    text-align: center;
+    padding: 14px 14px 14px;
+    color: black;
+    height: 48px;
+    
+}
+button:hover{
+    color: #9ccdff;
+    background-color: #fff;
+}
+#addMeal {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    width: 20vw;
+}
+#editMeal {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10vw;
+    margin-top: 5vh;
+    width: 30vw;
+}
+.form_field {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9ccdff;
+    outline: 0;
+    color: Black;
+    padding: 7px 0;
+    background: transparent;
+    font-size: 20px;
+    transition: border-color 0.2s;
+}
+select {
+    height: 48px;
+    /* box-shadow: 0 0 0 2px #616467; */
+    padding: 14px 14px 14px;
+    border: 1px solid;
+    min-width: 100px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #9ccdff;
+
+}
+select:hover{
+    color: #9ccdff;
+    background-color: #fff;
+}
+#editMealBtn {
+    margin-top: 3vh;
+}

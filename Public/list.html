@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./list.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Meal Prep</h1>
+        <h1 id="mealPrep">Meal Prep</h1>
         <div id = "links">
             <a href="./home.html"><img id ="home-page"class ="linkIcon"src="https://img.icons8.com/material-outlined/512/home-page.png"  alt=""></a>
             <a href="./list.html"><img  id ="list-page"class ="linkIcon" src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/512/external-shopping-list-shopping-and-ecommerce-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png"  alt=""></a>
@@ -30,9 +31,9 @@
     
     
         </section>
-        <button onClick="window.print()">Print this page</button>
-
+        
     </main>
+    <button id="print" onClick="window.print()">Print this page</button>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./list.js"></script>
 </body>

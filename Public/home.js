@@ -27,7 +27,6 @@ const getDays = () => axios.get(`${baseURL2}/days`).then(daysCallback)
 
 function displayMeals(arr) {
     mealContainer.innerHTML = `
-    <h1>Saved Meals</h1>
             `
     for (let i = 0; i < arr.length; i++) {
         createMealCard(arr[i])
@@ -39,8 +38,7 @@ function createMealCard(meal) {
     
     mealCard.innerHTML = `<img class ="mealImg" alt='meal image' src=${meal.image}/>
     <h3>${meal.name}</h3>
-    <p>${meal.ingredients}</p>
-    <p>${meal.calories} Calories</p>
+    <h4>${meal.calories} Calories</h4>
     <button onclick="deleteMeal(${meal.id}); window.location.reload()">delete</button>
     `
 

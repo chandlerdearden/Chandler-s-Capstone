@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./meals.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,10 +21,14 @@
     <main>
         <section id="addMeal">
             <h3>Add Your Own Meal</h3>
-            <input id="newMealName" type="text" placeholder="Meal name">
-            <input id="newMealIngredients" type="text" placeholder="Ingredients">
-            <input id="newMealImage" type="text" placeholder="Image URL">
-            <input id ='newMealCalories' type="number" placeholder="Calories">
+            <input id="newMealName"  class = 'form_field' type="text" placeholder="Meal name">
+            <br>
+            <input id="newMealImage" class = 'form_field'type="text" placeholder="Image URL">
+            <br>
+            <input id ='newMealCalories'class = 'form_field' type="number" placeholder="Calories">
+            <br>
+            <input id="newMealIngredients" class = 'form_field'type="text" placeholder="Ingredients">
+            <br>
             <button id ="addMealBtn">Add Meal</button>
 
 
@@ -33,11 +38,12 @@
         <br>
         <section id="editMeal">
             <h3>Edit an Existing Meal</h3>
-            <label for = "mealSelector">Choose a Meal:</label>
+            <!-- <label for = "mealSelector">Choose a Meal:</label> -->
             <select name="Select Meal" id="meal-selector">
                 <option selected disabled>--Please choose a Meal--</option>
             </select>
-            <button id="editBtn">Choose</button>
+            <br>
+            <button id="editBtn">Edit Meal</button>
             
             
         </section>

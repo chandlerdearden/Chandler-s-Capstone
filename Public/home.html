@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./home.css">
     <title>Chandler's Capstone</title>
 </head>
 <body>
@@ -18,27 +19,28 @@
 
     </header>
     <main>
-        <Section id = "schedule">
-            <h1>Schedule</h1>
-            <div id ="topSchedule">
-                <select id="mealSelectMain">
-                    <option selected disabled>Add Meal</option>
-                </select>
-                <select id="daySelect">
-                    <option selected disabled>To Day</option>
-                    <option value="sunday">Sunday</option>
-                    <option value="monday">Monday</option>
-                    <option value="tuesday">Tuesday</option>
-                    <option value="wednesday">Wednesday</option>
-                    <option value="thursday">Thursday</option>
-                    <option value="friday">Friday</option>
-                    <option value="saturday">Saturday</option>
-                    
-                </select>
+        <br>
+        <div id ="topSchedule">
+            <select id="mealSelectMain">
+                <option selected disabled>Add Meal</option>
+            </select>
+            <select id="daySelect">
+                <option selected disabled> Add Day</option>
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
                 
-                <button id="addMealToScheduleBtn">Add</button>
-           
-            </div>
+            </select>
+            
+            <button id="addMealToScheduleBtn">Add</button>
+       
+        </div>
+        <Section id = "schedule">
+            <!-- <h1>Schedule</h1> -->
 
 
             <div id ="week">
@@ -99,15 +101,16 @@
             
         </Section>
         
-        
+        <div id ='savedMeals'>
+             <h1>Saved Meals</h1>
+        </div>
         <Section id="mealsContainer">
-            <h1>Saved Meals</h1>
         </Section>
 
         
         
     </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="./home.js"></script>
 </body>
 </html>

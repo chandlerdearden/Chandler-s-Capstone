@@ -49,18 +49,18 @@ function editMeal () {
         let index= meals.findIndex(meal => meal.name === mealName)
         let editor = document.createElement('div')
         editor.innerHTML = `
-        <p id = "mealId">${meals[index].id}</p>
+        <p class ="hidden" id = "mealId">${meals[index].id}</p>
         <label for ="editMealName">Name:</label>
-        <input id="editMealName" type="text" value= '${meals[index].name}'><br>
+        <input id="editMealName" class = 'form_field' type="text" value= '${meals[index].name}'><br>
 
         <label for ="editMealImage">ImageURL:</label>
-        <input id="editMealImage" type="text" value="${meals[index].image}"><br>
+        <input id="editMealImage" class = 'form_field' type="text" value="${meals[index].image}"><br>
 
         <label for ="editMealCalories">Calories:</label>
-        <input id ='editMealCalories' type="number" value="${meals[index].calories}"><br>
+        <input id ='editMealCalories' class = 'form_field' type="number" value="${meals[index].calories}"><br>
 
         <label for ="editMealIngredients">Ingredients:</label>
-        <input id="editMealIngredients" size = 50 type="text" value="${meals[index].ingredients}"><br>
+        <input id="editMealIngredients" class = 'form_field' size = 50 type="text" value="${meals[index].ingredients}"><br>
         <button id ="editMealBtn"> Update</button>
         `
         editMealSection.appendChild(editor)
