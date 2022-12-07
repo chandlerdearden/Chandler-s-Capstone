@@ -8,14 +8,14 @@ module.exports = {
     },
 
     postMeals: function(req,res) {
-        let {name, ingredients, calories, imageURL } = req.body
+        let {name, ingredients, calories, image } = req.body
 
         let newMeal = {
             id: globalId,
             name,
             ingredients,
             calories,
-            imageURL
+            image
         }
         meals.push(newMeal)
         res.status(200).send(meals)

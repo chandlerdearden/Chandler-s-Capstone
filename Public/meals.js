@@ -31,7 +31,7 @@ function createMealHandler () {
         name: name.value,
         ingredients: ingredients.value,
         calories: calories.value,
-        imageURL: image.value
+        image: image.value
     }
     createMeal(body)
 
