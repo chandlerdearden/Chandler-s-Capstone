@@ -34,6 +34,7 @@ function createMealHandler () {
         image: image.value
     }
     createMeal(body)
+    alert(`${name.value} was added to saved meals`)
 
     name.value = ''
     ingredients.value = ''
